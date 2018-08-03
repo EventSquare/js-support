@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>EventSquare - JSSupport</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <script>
+        !function(e,v,n,t,s,q,r){if(e.esq_support)return;s = e.esq_support=function(){s.callMethod?
+        s.callMethod.apply(s,arguments):s.queue.push(arguments)};s.queue=[];
+        q=v.createElement('script');q.async=!0;q.src=t;r=v.getElementsByTagName(n)[0];
+        r.parentNode.insertBefore(q,r)}(window,document,'script','../dist/support.min.js');
+        esq_support('setContentPath','../dist');
+        esq_support(
+            'init',
+            'bootyravefestival');
+    </script> -->
+
+
+    <script>
+        !function(e,v,n,t,s,q,r){if(e.esq_support)return;s = e.esq_support=function(){s.callMethod?
+        s.callMethod.apply(s,arguments):s.queue.push(arguments)};s.queue=[];
+        q=v.createElement('script');q.async=!0;q.src=t;r=v.getElementsByTagName(n)[0];
+        r.parentNode.insertBefore(q,r)}(window,document,'script','../dist/support.min.js');
+        esq_support('setContentPath','../dist');
+        esq_support(
+            'init',
+            {
+                name: 'Coachella',
+                edition: '73827327832',
+                email: 'maarten@roxorstudios.com',
+                phone: '0488838232',
+                language: 'en',
+            },
+            'modal');
+    </script>
+
+    <div id="support-demo" style="width: 600px;"></div>
+
+    <button onclick="esq_support('show')" id="test-btn">Open store</button>
+
+    <script>
+        var link = document.getElementById('test-btn');
+        setTimeout(function(){ link.click(); }, 200);
+
+
+    </script>
+</body>
+</html>
