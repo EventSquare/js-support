@@ -34,7 +34,6 @@
         var es_preloader = document.createElement('div')
         var es_preloader_animation = document.createElement('div')
 
-        var es_header = document.createElement('div')
         var es_logo = document.createElement('img')
         var es_close = document.createElement('img')
 
@@ -45,24 +44,19 @@
         //Add classes
         e.wrapper.classList.add( "es-support-modal-wrapper")
         e.support.classList.add("es-support-iframe")
+        e.support.setAttribute("id", "es-container");
+
         e.modal.classList.add("es-support-modal")
 
         es_preloader.classList.add("es-support-modal-preloader")
         es_preloader_animation.classList.add("es-support-modal-preloader-animation")
-        es_header.classList.add("es-support-header")
-        es_logo.classList.add("es-support-logo")
-        es_close.classList.add("es-support-close")
 
         //Append elements
         e.wrapper.appendChild(e.modal)
         e.wrapper.appendChild(es_preloader)
         es_preloader.appendChild(es_preloader_animation)
 
-        e.modal.appendChild(es_header)
         e.modal.appendChild(e.support)
-
-        es_header.appendChild(es_close)
-        es_header.appendChild(es_logo)
 
         //Listeners
         e.wrapper.onclick = function() {
@@ -93,8 +87,15 @@
         e.wrapper.classList.remove("es-support-modal-open")
     }
     e.layout = function() {
-        var height = w.innerHeight - 50 - 50
+        var height = w.innerHeight - 100
         e.modal.style.height = height + "px"
+        // var iframe = document.getElementById('es-container')
+        //
+        // if (iframe) {
+        //     var cont =  iframe.contentWindow.document.body || frame.contentDocument.body
+        //     // here you can make the height
+        //     e.modal.style.height = cont.scrollHeight + "px";
+    	// }
     }
     e.setContentPath = function (path) {
         e.contentPath = path
@@ -144,5 +145,10 @@
 
         return output_string.join('&')
     }
+    window.addEventListener('message', function(event) {
+        if(event.data === 'close') {
+            e.hide()
+        }
+   });
 
 }(window,document))

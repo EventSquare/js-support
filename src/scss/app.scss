@@ -55,7 +55,7 @@
 .es-support-modal {
 
     max-width: 350px;
-    height: 500px;
+    // height: 500px;
     background-color: #FFFFFF;
     margin: 0 auto;
     box-sizing: border-box;
@@ -114,7 +114,7 @@
 
     .es-support-iframe {
         width: 100%;
-        height: calc(100% - 50px);
+        height: 100%;
         border: none;
         position: relative;
         margin-top: -3px;
