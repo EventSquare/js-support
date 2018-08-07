@@ -77,7 +77,7 @@
         get_values = get_values ? '?' + get_values : ""
         if(!e.support.src){
             // e.support.src = "https://support.eventsquare.io"+get_values
-            e.support.src = "http://localhost:8000"+get_values
+            e.support.src = e.contentPath+get_values
 
         }
         e.wrapper.classList.add("es-support-modal-open")
@@ -89,13 +89,6 @@
     e.layout = function() {
         var height = w.innerHeight - 100
         e.modal.style.height = height + "px"
-        // var iframe = document.getElementById('es-container')
-        //
-        // if (iframe) {
-        //     var cont =  iframe.contentWindow.document.body || frame.contentDocument.body
-        //     // here you can make the height
-        //     e.modal.style.height = cont.scrollHeight + "px";
-    	// }
     }
     e.setContentPath = function (path) {
         e.contentPath = path
