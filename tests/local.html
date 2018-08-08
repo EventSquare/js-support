@@ -21,7 +21,6 @@
         q=v.createElement('script');q.async=!0;q.src=t;r=v.getElementsByTagName(n)[0];
         r.parentNode.insertBefore(q,r)}(window,document,'script','../dist/support.min.js');
         esq_support('setContentPath','../dist');
-        // esq_support('setSrcPath','http://localhost:8001');
         esq_support(
             'init',
             {
@@ -31,6 +30,7 @@
                 language: 'nl',
             },
             'modal');
+        esq_support('setSrcPath','http://localhost:8001');
     </script>
 
     <div id="support-demo" style="width: 600px;"></div>

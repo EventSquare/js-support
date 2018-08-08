@@ -76,10 +76,9 @@
         var get_values = e.build_query(e.params)
         get_values = get_values ? '?' + get_values : ""
         if(!e.support.src){
-            // e.support.src = "https://support.eventsquare.io"+get_values
-            e.support.src = "http://localhost:8001"+get_values
-
+            e.support.src = "https://support.eventsquare.io"
         }
+        e.support.src += get_values
         e.wrapper.classList.add("es-support-modal-open")
         e.layout()
     }
