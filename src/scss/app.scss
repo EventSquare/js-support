@@ -60,7 +60,13 @@
 .es-support-modal {
 
     max-width: 450px;
-    height: 600px;
+    height: 500px;
+    @media (min-width: 370px){
+        height: 630px;
+    }
+    @media (min-width: 400px){
+        height: 660px;
+    }
     background-color: #FFFFFF;
     margin: 0 auto;
     box-sizing: border-box;
