@@ -76,7 +76,8 @@
         var get_values = e.build_query(e.params)
         get_values = get_values ? '?' + get_values : ""
         if(!e.support.src){
-            e.support.src = "https://support.eventsquare.io"+get_values
+            // e.support.src = "https://support.eventsquare.io"+get_values
+            e.support.src = "http://localhost:8001"+get_values
 
         }
         e.wrapper.classList.add("es-support-modal-open")
@@ -91,6 +92,9 @@
     }
     e.setContentPath = function (path) {
         e.contentPath = path
+    }
+    e.setSrcPath = function (path) {
+        e.support.src = path
     }
     e.callMethod = function(method,arguments){
         if(typeof eval('e.' + method) !== 'undefined'){
@@ -113,6 +117,7 @@
     e.build_query = function (obj, num_prefix, temp_key) {
 
         var output_string = []
+        if(!obj) return ""
 
         Object.keys(obj).forEach(function (val) {
 
@@ -140,6 +145,10 @@
     window.addEventListener('message', function(event) {
         if(event.data === 'close') {
             e.hide()
+        }
+        if(event.data[0]=='setHeight'){
+            e.support.style.height = event.data[1] + 'px'
+            e.modal.style.height = event.data[1] + 'px'
         }
    });
 

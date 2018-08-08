@@ -8,19 +8,24 @@
     left: 0px;
 
     bottom: 0px;
-    padding: 35px;
+
     box-sizing: border-box;
     visibility: hidden;
     position: absolute;
     left: -10000px;
     top: -10000px;
     z-index: 100000;
+    padding: 15px;
 
     &.es-support-modal-open {
         visibility: visible;
         position: fixed;
         left: 0px;
         top: 0px;
+    }
+
+    @media (min-width: 900px){
+        padding: 35px;
     }
 }
 
@@ -54,8 +59,8 @@
 
 .es-support-modal {
 
-    max-width: 350px;
-    // height: 500px;
+    max-width: 450px;
+    height: 600px;
     background-color: #FFFFFF;
     margin: 0 auto;
     box-sizing: border-box;
