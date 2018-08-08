@@ -146,8 +146,9 @@
             e.hide()
         }
         if(event.data[0]=='setHeight'){
-            e.support.style.height = event.data[1] + 'px'
-            e.modal.style.height = event.data[1] + 'px'
+            var height = Math.min((w.innerHeight - 30), event.data[1])
+            e.support.style.height = height + 'px'
+            e.modal.style.height = height + 'px'
         }
    });
 

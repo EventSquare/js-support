@@ -61,10 +61,10 @@
 
     max-width: 450px;
     height: 500px;
-    @media (min-width: 370px){
+    @media (min-height: 660px){
         height: 630px;
     }
-    @media (min-width: 400px){
+    @media (min-height: 700px){
         height: 660px;
     }
     background-color: #FFFFFF;
