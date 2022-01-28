@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var source = require('vinyl-source-stream');
 var concat = require("gulp-concat");
 var cleancss = require('gulp-clean-css');
 var minify = require('gulp-minify');
@@ -19,7 +18,7 @@ gulp.task('sass', function() {
 });
 
 // Javascript
-gulp.task('javascript', function() {
+gulp.task('javascript', function () {
 	return gulp.src([
 		'./src/js/app.js'
 	])
@@ -40,7 +39,7 @@ gulp.task('images', function() {
 
 // Watch task
 gulp.task('default',function() {
-	gulp.watch(['src/scss/**/*.scss'],['sass']);
-	gulp.watch(['src/js/**/*.js'],['javascript']);
-	gulp.watch(['src/images/**/*'],['images']);
+	gulp.watch(['src/scss/**/*.scss'], gulp.series('sass'));
+	gulp.watch(['src/js/**/*.js'], gulp.series('javascript'));
+	gulp.watch(['src/images/**/*'], gulp.series('images'));
 });

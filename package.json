@@ -1,6 +1,6 @@
 {
   "name": "js-support",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easy JS library to embed EventSquare support in your website.",
   "directories": {
     "test": "tests"
@@ -18,15 +18,14 @@
     "url": "https://github.com/EventSquare/js-support/issues"
   },
   "homepage": "https://github.com/EventSquare/js-support#readme",
-  "devDependencies": {
-    "del": "^3.0.0",
-    "gulp-clean-css": "^3.6.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-minify": "^1.0.0",
-    "gulp-sass": "^3.1.0",
-    "vinyl-source-stream": "^1.1.0"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "gulp": "^3.9.1"
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^5.1.0",
+    "vinyl": "^2.2.1"
   }
 }

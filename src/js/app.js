@@ -7,8 +7,7 @@
     e.element = null
     e.params = null
 
-
-    e.contentPath = 'https://s3-eu-west-1.amazonaws.com/eventsquare.plugins/support'
+    e.contentPath = 'https://s3-eu-central-1.amazonaws.com/esq-plugins/support'
 
     e.init = function(params,element) {
         e.params = params
